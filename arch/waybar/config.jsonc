@@ -1,6 +1,6 @@
 {
   "layer": "top",
-  "height": 42,
+  "height": 35,
   "spacing": 6,
   "include": [
     "./modules/groups.jsonc",
