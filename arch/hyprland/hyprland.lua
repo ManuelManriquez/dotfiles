@@ -65,6 +65,9 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 -- Terminal
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("kitty"))
 
+-- File explorer
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("dolphin"))
+
 -- Close active window
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
 
