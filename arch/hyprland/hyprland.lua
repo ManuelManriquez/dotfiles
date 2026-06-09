@@ -2,11 +2,22 @@
 -- MONITOR CONFIGURATION
 -- =====================
 -- Use preferred resolution, auto position, auto scale
+
+local hostname = io.popen("hostname"):read("*l")
+
+local scale
+if hostname == "man" then
+    scale = 1
+else
+    scale = "auto"
+end
+
+
 hl.monitor({
 	output = "",
 	mode = "preferred",
 	position = "auto",
-	scale = "auto",
+	scale = scale,
 })
 
 -- =====================
