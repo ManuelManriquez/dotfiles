@@ -78,6 +78,7 @@ PACKAGES=(
   ttf-jetbrains-mono-nerd
   ttf-font-awesome
   ttf-nerd-fonts-symbols
+  noto-fonts-emoji
 
   # Misc
   git
