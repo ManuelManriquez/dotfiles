@@ -97,7 +97,6 @@ info "Creating symlinks in $CONFIG_DIR..."
 # Format: "folder_in_dotfiles_repo:target_in_.config"
 CONFIGS=(
   "hyprland:hypr"
-  "hyprlock:hyprlock"
   "waybar:waybar"
   "nvim:nvim"
   "kitty:kitty"
