@@ -63,6 +63,7 @@ PACKAGES=(
 
   # Editor
   neovim
+  lazygit
 
   # System utilities
   brightnessctl
