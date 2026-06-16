@@ -26,6 +26,7 @@ hl.monitor({
 -- Launch status bar on session start
 hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar")
+	hl.exec_cmd("keychain --quiet --agents ssh")
 end)
 
 -- =====================

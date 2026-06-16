@@ -83,6 +83,7 @@ PACKAGES=(
   # Misc
   git
   curl
+  keychain
   wget
 )
 
@@ -128,7 +129,31 @@ for entry in "${CONFIGS[@]}"; do
 done
 
 # =============================================================
-# 4. ENABLE SERVICES
+# 4. SYMLINK HOME FILES
+# =============================================================
+info "Creating symlinks in \$HOME..."
+
+# .zshrc
+if [ -f "$HOME/.zshrc" ] && [ ! -L "$HOME/.zshrc" ]; then
+  warn "Backing up existing .zshrc to .zshrc.bak"
+  mv "$HOME/.zshrc" "$HOME/.zshrc.bak"
+fi
+ln -sf "${DOTFILES_DIR}/zsh/.zshrc" "$HOME/.zshrc"
+info "Linked zsh/.zshrc → ~/.zshrc"
+
+# ~/.ssh/config
+mkdir -p "$HOME/.ssh"
+chmod 700 "$HOME/.ssh"
+if [ -f "$HOME/.ssh/config" ] && [ ! -L "$HOME/.ssh/config" ]; then
+  warn "Backing up existing .ssh/config to .ssh/config.bak"
+  mv "$HOME/.ssh/config" "$HOME/.ssh/config.bak"
+fi
+ln -sf "${DOTFILES_DIR}/ssh/config" "$HOME/.ssh/config"
+chmod 600 "${DOTFILES_DIR}/ssh/config"
+info "Linked ssh/config → ~/.ssh/config"
+
+# =============================================================
+# 5. ENABLE SERVICES
 # =============================================================
 info "Enabling system services..."
 
