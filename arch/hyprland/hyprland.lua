@@ -7,11 +7,10 @@ local hostname = io.popen("hostname"):read("*l")
 
 local scale
 if hostname == "man" then
-    scale = 1
+	scale = 1
 else
-    scale = "auto"
+	scale = "auto"
 end
-
 
 hl.monitor({
 	output = "",
@@ -95,6 +94,12 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 -- Toggle fullscreen
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 
+-- Toggle floating + pin
+hl.bind(mainMod .. " + P", function()
+	hl.dispatch(hl.dsp.window.float({ action = "toggle" }))
+	hl.dispatch(hl.dsp.window.pin())
+end)
+
 -- =====================
 -- FOCUS MOVEMENT
 -- =====================
@@ -113,7 +118,7 @@ end
 -- =====================
 -- MOVE WINDOW TO WORKSPACE
 -- =====================
-for i = 1, 3 do
+for i = 1, 5 do
 	hl.bind(mainMod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))
 end
 
