@@ -86,7 +86,7 @@ hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("hyprctl dispatch exit"))
 
 -- App launcher
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("wofi --show drun"))
+hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("walker"))
 
 -- Toggle floating
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))

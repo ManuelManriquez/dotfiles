@@ -53,7 +53,7 @@ PACKAGES=(
 
   # Wayland essentials
   waybar
-  wofi
+  walker
   grim
   slurp
   wl-clipboard
