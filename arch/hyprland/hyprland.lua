@@ -26,6 +26,8 @@ hl.monitor({
 hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("keychain --quiet --agents ssh")
+	hl.exec_cmd("elephant")
+	hl.exec_cmd("walker --gapplication-service")
 end)
 
 -- =====================

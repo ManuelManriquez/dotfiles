@@ -54,6 +54,7 @@ PACKAGES=(
   # Wayland essentials
   waybar
   walker
+  elephant-all
   grim
   slurp
   wl-clipboard
