@@ -54,7 +54,10 @@ PACKAGES=(
   # Wayland essentials
   waybar
   walker
-  elephant-all
+  elephant
+  elephant-desktopapplications
+  elephant-runner
+  elephant-files
   grim
   slurp
   wl-clipboard
@@ -102,6 +105,7 @@ CONFIGS=(
   "hyprland:hypr"
   "waybar:waybar"
   "nvim:nvim"
+  "walker:walker"
   "kitty:kitty"
 )
 

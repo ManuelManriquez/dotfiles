@@ -1,0 +1,16 @@
+force_keyboard_focus = true
+close_when_open = true
+click_to_close = true
+theme = "default"
+
+[providers]
+default = ["desktopapplications", "runner"]
+empty = ["desktopapplications"]
+
+[[providers.prefixes]]
+prefix = ">"
+provider = "runner"
+
+[[providers.prefixes]]
+prefix = "/"
+provider = "files"
