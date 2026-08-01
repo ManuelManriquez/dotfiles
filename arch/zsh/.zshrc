@@ -2,7 +2,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="macovsky"
 
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -21,3 +21,5 @@ source ~/.keychain/$(hostname)-sh 2>/dev/null
 
 # opencode
 export PATH=/home/manuelmanriquez/.opencode/bin:$PATH
+
+. "$HOME/.local/bin/env"
